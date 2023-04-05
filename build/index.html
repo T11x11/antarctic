@@ -4,58 +4,158 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta name="description" content="Круизы в Антарктику">
+    <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header" data-header>
+        <div class="header__overlay" data-close-menu></div>
+        <div class="container">
+          <div class="header__wrapper">
+            <a class="header__logo" href="index.html" rel="home" aria-label="Переход на главную страницу">
+              <svg width="70" height="38" aria-hidden="true">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="#">Преимущества</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Направления</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Ближайшие круизы</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="header__burger" type="button" data-burger aria-label="Переключатель отображения меню" aria-pressed="false">
+              <svg class="header__burger-icon" width="24" height="16" aria-hidden="true">
+                <use class="header__burger-open" href="img/sprite.svg#icon-open"></use>
+                <use class="header__burger-close" href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </header>
       <main>
         <section class="intro">
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
+        </section>
+        <section class="travel">
+          <div class="container">
+            <div class="travel__wrapper">
+              <div class="travel__content">
+                <h2>Путешествие на&nbsp;край Земли</h2>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.
+                    Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги,
+                    несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+                </p>
+              </div>
+              <div class="travel__image">
+                <picture>
+                  <img src="img/photo-travel.jpg" width="560" height="301" alt="Фото пингвинов">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="container">
+            <div class="advantages__wrapper">
+              <h2>Преимущества</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <svg class="advantages__icon advantages__icon--ship" width="27" height="32" aria-hidden="true">
+                    <use href="img/sprite.svg#icon-ship"></use>
+                  </svg>
+                  <h3>Небольшой круизный лайнер</h3>
+                  <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей,
+                      поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__icon advantages__icon--inclusive" width="38" height="32" aria-hidden="true">
+                    <use href="img/sprite.svg#icon-inclusive"></use>
+                  </svg>
+                  <h3>Система все&nbsp;включено</h3>
+                  <p>Все наши круизы работают по&nbsp;системе &ldquo;Все Включено&rdquo;. Великолепные блюда
+                    и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__icon advantages__icon--zodiac" width="44" height="32" aria-hidden="true">
+                    <use href="img/sprite.svg#icon-zodiac"></use>
+                  </svg>
+                  <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                  <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <a class="footer__logo" href="index.html" rel="home" aria-label="Переход на главную страницу">
+              <svg width="70" height="38" aria-hidden="true">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="footer__nav">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#">Преимущества</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#">Направления</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#">Ближайшие круизы</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+              <ul class="footer__socials">
+                <li class="footer__socials-item">
+                  <a href="https://ok.ru" aria-label="Наш Одноклассники">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="img/sprite.svg#icon-ok"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="https://dzen.ru/" aria-label="Наш Яндекс-Дзен">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="img/sprite.svg#icon-dzen"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="https://www.reddit.com/" aria-label="Наш Reddit">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use href="img/sprite.svg#icon-reddit"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
     </div>
 
     <script src="js/vendor.min.js"></script>
