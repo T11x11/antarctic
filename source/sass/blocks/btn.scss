@@ -1,17 +1,21 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  display: flex;
+  padding: 11px 20px;
 
-  color: $color-default-white;
+  color: $color-tangaroa;
 
-  background-color: $color-neon-blue;
+  background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--form {
+    width: 100%;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   &:disabled {
@@ -21,6 +25,6 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
