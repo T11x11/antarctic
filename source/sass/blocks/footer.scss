@@ -76,6 +76,7 @@
 
   a {
     color: $color-alice-blue;
+    word-break: break-word;
 
     @include hover {
       opacity: 0.6;
@@ -108,9 +109,15 @@
   }
 }
 
+.footer__item {
+  max-width: 300px;
+}
+
 .footer__socials {
+  max-width: 150px;
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 18px;

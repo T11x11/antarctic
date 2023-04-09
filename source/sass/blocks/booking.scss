@@ -133,5 +133,9 @@
       line-height: 21;
       color: rgba(1, 28, 64, 0.7);
     }
+
+    @include hover {
+      opacity: 0.8;
+    }
   }
 }

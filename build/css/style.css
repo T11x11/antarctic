@@ -1313,6 +1313,7 @@ body {
 }
 
 .header__logo {
+  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1344,6 +1345,7 @@ body {
 }
 
 .header__list {
+  max-width: 1000px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1355,10 +1357,13 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  -webkit-column-gap: 34px;
+  -moz-column-gap: 34px;
+  column-gap: 34px;
 }
 
-.header__item:not(:last-child) {
-  margin: 0 34px 0 0;
+.header__item {
+  max-width: 300px;
 }
 
 .header__link {
@@ -1366,6 +1371,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  word-break: break-word;
   color: #f9fbfd;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -1390,6 +1396,10 @@ body {
   -webkit-transition: opacity 0.3s ease 0.2s;
   -o-transition: opacity 0.3s ease 0.2s;
   transition: opacity 0.3s ease 0.2s;
+}
+
+.is-open .header__burger {
+  margin-right: -7px;
 }
 
 .header__burger-icon {
@@ -1613,7 +1623,6 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
   gap: 30px;
   list-style-type: none;
 }
@@ -1623,6 +1632,8 @@ body {
   width: 100%;
   max-height: 386px;
   max-width: 260px;
+  -ms-grid-column-align: center;
+  justify-self: center;
   padding: 29px 25px 35px;
   color: #f9fbfd;
   background-color: #011c40;
@@ -1636,6 +1647,10 @@ body {
   visibility: hidden;
 }
 
+.catalog__card:focus-within a {
+  outline: none;
+}
+
 .catalog__card-info {
   height: 100%;
   display: -webkit-box;
@@ -1645,6 +1660,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: auto;
 }
 
 .catalog__card-info h3 {
@@ -1661,7 +1677,6 @@ body {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  overflow: auto;
 }
 
 .catalog__card-info dt {
@@ -1843,6 +1858,7 @@ body {
 
 .contacts__map {
   height: 306px;
+  background-color: #d8d8d9;
   background-image: -webkit-image-set(url("../img/bg-map@2x.webp") 2x, url("../img/bg-map.webp") 1x, url("../img/bg-map@2x.jpg") 2x, url("../img/bg-map.jpg") 1x);
   background-image: image-set(url("../img/bg-map@2x.webp") 2x, url("../img/bg-map.webp") 1x, url("../img/bg-map@2x.jpg") 2x, url("../img/bg-map.jpg") 1x);
   background-repeat: no-repeat;
@@ -1949,6 +1965,7 @@ body {
 
 .footer__nav a {
   color: #f9fbfd;
+  word-break: break-word;
 }
 
 .footer__list {
@@ -1973,9 +1990,16 @@ body {
   display: flex;
 }
 
+.footer__item {
+  max-width: 300px;
+}
+
 .footer__socials {
+  max-width: 150px;
   margin: 0;
   padding: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2049,8 +2073,10 @@ body {
     height: 20px;
   }
 
-  .header__item:not(:last-child) {
-    margin: 0 24px 0 0;
+  .header__list {
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
   }
 
   .header__link {
@@ -2090,7 +2116,7 @@ body {
 
   .travel__content h2 {
     margin-bottom: 15px;
-    padding-right: 22px;
+    padding-right: 23px;
     font-size: 26px;
     line-height: 36px;
   }
@@ -2355,6 +2381,10 @@ body {
   }
 
   .header__list {
+    row-gap: 28px;
+  }
+
+  .header__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2375,10 +2405,6 @@ body {
     -webkit-transform: translateX(-15px);
     -ms-transform: translateX(-15px);
     transform: translateX(-15px);
-  }
-
-  .header__item:not(:last-child) {
-    margin: 0 0 28px 0;
   }
 
   .header__link {
@@ -2707,6 +2733,10 @@ body {
     opacity: 0.6;
   }
 
+  .custom-toggle label:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -2729,6 +2759,14 @@ body {
 
   .catalog__card-info a:hover:not(.focus-visible) {
     background-color: #d8d8d9;
+  }
+
+  .booking__form input:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__item a:hover:not(.focus-visible) {
+    opacity: 0.6;
   }
 
   .footer__logo:hover:not(.focus-visible) {

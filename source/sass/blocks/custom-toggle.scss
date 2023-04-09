@@ -35,8 +35,11 @@
     position: relative;
     padding: 3px 0;
     padding-left: 23px;
-
     cursor: pointer;
+
+    @include hover {
+      opacity: 0.6;
+    }
 
     span {
       margin-bottom: 0;
