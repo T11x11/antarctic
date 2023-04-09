@@ -137,6 +137,7 @@
 
     @media (max-width: 767px) {
       width: 100%;
+      max-width: none;
       opacity: 0;
       transition: all ease-out 0.15s;
       transform: translateX(-15px);
