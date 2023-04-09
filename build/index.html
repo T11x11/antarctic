@@ -7,6 +7,7 @@
     <meta name="description" content="Круизы в Антарктику">
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=19138736-bb9c-4255-a968-0bc869371c96&lang=ru_RU" type="text/javascript"></script>
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -35,7 +36,7 @@
                   <a class="header__link" href="#catalog" data-close-menu>Ближайшие круизы</a>
                 </li>
                 <li class="header__item">
-                  <a class="header__link" href="#" data-close-menu>Контакты</a>
+                  <a class="header__link" href="#contacts" data-close-menu>Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -67,7 +68,8 @@
               </div>
               <div class="travel__image">
                 <picture>
-                  <img src="img/photo-travel.jpg" width="560" height="301" alt="Фото пингвинов">
+                  <source type="image/webp" srcset="img/photo-travel.webp 1x, img/photo-travel@2x.webp 2x">
+                  <img src="img/photo-travel.jpg" srcset="img/photo-travel@2x.jpg 2x" width="560" height="301" alt="Фото пингвинов">
                 </picture>
               </div>
             </div>
@@ -113,7 +115,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-astoria.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-astoria.webp 1x, img/card-astoria@2x.webp 2x">
+                      <img src="img/card-astoria.jpg" srcset="img/card-astoria@2x.jpg 2x" width="260" height="386" alt="Круиз Астория">
                     </picture>
                     <span>Круиз "Астория"</span>
                   </div>
@@ -135,7 +138,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-eline.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-eline.webp 1x, img/card-eline@2x.webp 2x">
+                      <img src="img/card-eline.jpg" srcset="img/card-eline@2x.jpg 2x" width="260" height="386" alt="Круиз Элайн">
                     </picture>
                     <span>Круиз "Элайн"</span>
                   </div>
@@ -157,7 +161,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-atlantis.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-atlantis.webp 1x, img/card-atlantis@2x.webp 2x">
+                      <img src="img/card-atlantis.jpg" srcset="img/card-atlantis@2x.jpg 2x" width="260" height="386" alt="Круиз Атлантис">
                     </picture>
                     <span>Круиз "Атлантис"</span>
                   </div>
@@ -179,7 +184,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-odysseus.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-odysseus.webp 1x, img/card-odysseus@2x.webp 2x">
+                      <img src="img/card-odysseus.jpg" srcset="img/card-odysseus@2x.jpg 2x" width="260" height="386" alt="Круиз Одиссей">
                     </picture>
                     <span>Круиз "Одиссей"</span>
                   </div>
@@ -201,7 +207,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-olympia.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-olympia.webp 1x, img/card-olympia@2x.webp 2x">
+                      <img src="img/card-olympia.jpg" srcset="img/card-olympia@2x.jpg 2x" width="260" height="386" alt="Круиз Олимпия">
                     </picture>
                     <span>Круиз "Олимпия"</span>
                   </div>
@@ -223,7 +230,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-aurora.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-aurora.webp 1x, img/card-aurora@2x.webp 2x">
+                      <img src="img/card-aurora.jpg" srcset="img/card-aurora@2x.jpg 2x" width="260" height="386" alt="Круиз Аврора">
                     </picture>
                     <span>Круиз "Аврора"</span>
                   </div>
@@ -245,7 +253,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-leonor.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-leonor.webp 1x, img/card-leonor@2x.webp 2x">
+                      <img src="img/card-leonor.jpg" srcset="img/card-leonor@2x.jpg 2x" width="260" height="386" alt="Круиз Леонор">
                     </picture>
                     <span>Круиз "Леонор"</span>
                   </div>
@@ -267,7 +276,8 @@
                 <li class="catalog__card">
                   <div class="catalog__card-cover">
                     <picture>
-                      <img src="img/card-minion.jpg" width="260" height="386" alt="Круиз Астория">
+                      <source type="image/webp" srcset="img/card-minion.webp 1x, img/card-minion@2x.webp 2x">
+                      <img src="img/card-minion.jpg" srcset="img/card-minion@2x.jpg 2x" width="260" height="386" alt="Круиз Минион - 1">
                     </picture>
                     <span>Круиз "Минион - 1"</span>
                   </div>
@@ -331,6 +341,31 @@
             </div>
           </div>
         </section>
+        <section class="contacts" id="contacts">
+          <div class="container">
+            <div class="contacts__wrapper">
+              <h2 class="visually-hidden">Контакты</h2>
+              <div id="map" class="contacts__map"></div>
+              <div class="contacts__info">
+                <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <svg class="contacts__icon contacts__icon--pin" width="18" height="22" aria-hidden="true">
+                      <use href="img/sprite.svg#icon-pin"></use>
+                    </svg>
+                    <address aria-label="Наш адрес">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, 19/8</address>
+                  </li>
+                  <li class="contacts__item">
+                    <svg class="contacts__icon" width="18" height="18" aria-hidden="true">
+                      <use href="img/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <a href="tel:88002000000" type="tel" aria-label="Телефон офиса">8-800-200-00-00</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container">
@@ -352,7 +387,7 @@
                   <a href="#catalog">Ближайшие круизы</a>
                 </li>
                 <li class="footer__item">
-                  <a href="#">Контакты</a>
+                  <a href="#contacts">Контакты</a>
                 </li>
               </ul>
               <ul class="footer__socials">

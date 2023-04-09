@@ -1430,8 +1430,8 @@ body {
   background-color: #145b9d;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: -webkit-image-set(url("../img/bg-intro@2x.jpg") 2x, url("../img/bg-intro.jpg") 1x);
-  background-image: image-set(url("../img/bg-intro@2x.jpg") 2x, url("../img/bg-intro.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/bg-intro@2x.webp") 2x, url("../img/bg-intro.webp") 1x, url("../img/bg-intro@2x.jpg") 2x, url("../img/bg-intro.jpg") 1x);
+  background-image: image-set(url("../img/bg-intro@2x.webp") 2x, url("../img/bg-intro.webp") 1x, url("../img/bg-intro@2x.jpg") 2x, url("../img/bg-intro.jpg") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1493,6 +1493,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .travel__image picture {
@@ -1501,7 +1503,7 @@ body {
 
 .travel__image img {
   width: 100%;
-  min-width: 324px;
+  min-width: 560px;
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
@@ -1511,8 +1513,8 @@ body {
   padding: 110px 0 120px 0;
   color: #011c40;
   background-color: #e3ecf6;
-  background-image: -webkit-image-set(url("../img/bg-advantages@2x.jpg") 2x, url("../img/bg-advantages.jpg") 1x);
-  background-image: image-set(url("../img/bg-advantages@2x.jpg") 2x, url("../img/bg-advantages.jpg") 1x);
+  background-image: -webkit-image-set(url("../img/bg-advantages@2x.webp") 2x, url("../img/bg-advantages.webp") 1x, url("../img/bg-advantages@2x.jpg") 2x, url("../img/bg-advantages.jpg") 1x);
+  background-image: image-set(url("../img/bg-advantages@2x.webp") 2x, url("../img/bg-advantages.webp") 1x, url("../img/bg-advantages@2x.jpg") 2x, url("../img/bg-advantages.jpg") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1728,6 +1730,11 @@ body {
   padding: 50px 0;
   color: #011c40;
   background-color: #b4dafa;
+  background-image: -webkit-image-set(url("../img/bg-booking@2x.webp") 2x, url("../img/bg-booking.webp") 1x, url("../img/bg-booking@2x.jpg") 2x, url("../img/bg-booking.jpg") 1x);
+  background-image: image-set(url("../img/bg-booking@2x.webp") 2x, url("../img/bg-booking.webp") 1x, url("../img/bg-booking@2x.jpg") 2x, url("../img/bg-booking.jpg") 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
 }
 
 .booking__wrapper {
@@ -1765,7 +1772,7 @@ body {
 .booking__form {
   padding: 44px 50px 49px;
   width: 403px;
-  height: 455px;
+  min-height: 455px;
   color: #f9fbfd;
   background-color: #011c40;
 }
@@ -1777,6 +1784,10 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+}
+
+.booking__form input {
+  color: #011c40;
 }
 
 .booking__form input::-webkit-input-placeholder {
@@ -1812,6 +1823,91 @@ body {
   font-size: 14px;
   line-height: 21;
   color: rgba(1, 28, 64, 0.7);
+}
+
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.contacts__map {
+  height: 306px;
+  background-image: -webkit-image-set(url("../img/bg-map@2x.webp") 2x, url("../img/bg-map.webp") 1x, url("../img/bg-map@2x.jpg") 2x, url("../img/bg-map.jpg") 1x);
+  background-image: image-set(url("../img/bg-map@2x.webp") 2x, url("../img/bg-map.webp") 1x, url("../img/bg-map@2x.jpg") 2x, url("../img/bg-map.jpg") 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contacts__info {
+  margin-left: auto;
+  max-width: 500px;
+  padding-top: 75px;
+}
+
+.contacts__info p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 32px;
+}
+
+.contacts__info address,
+.contacts__info a {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  color: #011c40;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 21px;
+  list-style-type: none;
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+.contacts__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.contacts__icon--pin {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .footer {
@@ -1864,7 +1960,10 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
-  gap: 35px;
+  row-gap: 10px;
+  -webkit-column-gap: 35px;
+  -moz-column-gap: 35px;
+  column-gap: 35px;
   padding-top: 6px;
 }
 
@@ -1998,11 +2097,10 @@ body {
 
   .travel__image {
     padding-top: 9px;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
   }
 
   .travel__image img {
+    min-width: 324px;
     max-width: 324px;
   }
 
@@ -2084,6 +2182,7 @@ body {
 
   .booking {
     padding-bottom: 100px;
+    background-position-x: 88%;
   }
 
   .booking__wrapper {
@@ -2113,6 +2212,36 @@ body {
     text-align: center;
   }
 
+  .contacts {
+    padding: 100px 0 100px;
+  }
+
+  .contacts__wrapper {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .contacts__map {
+    height: 335px;
+  }
+
+  .contacts__info {
+    padding-top: 66px;
+  }
+
+  .contacts__info p {
+    margin-bottom: 27px;
+  }
+
+  .contacts__item {
+    padding-right: 33px;
+  }
+
+  .contacts__icon--pin {
+    margin-top: 6px;
+  }
+
   .footer {
     padding: 47px 0;
   }
@@ -2134,7 +2263,9 @@ body {
   }
 
   .footer__list {
-    gap: 25px;
+    -webkit-column-gap: 25px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
   }
 
   .footer__socials {
@@ -2281,9 +2412,8 @@ body {
   .intro {
     min-height: 500px;
     padding: 175px 0 180px 0;
-    background-image: -webkit-image-set(url("../img/bg-intro-mobile@2x.jpg") 2x, url("../img/bg-intro-mobile.jpg") 1x);
-    background-image: image-set(url("../img/bg-intro-mobile@2x.jpg") 2x, url("../img/bg-intro-mobile.jpg") 1x);
-    background-position: bottom;
+    background-size: 240%;
+    background-position: 45% center;
   }
 
   .intro h1 {
@@ -2334,7 +2464,7 @@ body {
 
   .travel__image img {
     min-width: auto;
-    max-width: none;
+    max-width: 560px;
   }
 
   .advantages {
@@ -2398,6 +2528,7 @@ body {
 
   .booking {
     padding: 21px 0 65px;
+    background-position-x: 55%;
   }
 
   .booking__info {
@@ -2419,9 +2550,9 @@ body {
   }
 
   .booking__form {
-    padding: 34px 30px 49px;
+    padding: 34px 30px 40px;
     width: 100%;
-    height: 460px;
+    min-height: 460px;
     max-width: 560px;
   }
 
@@ -2433,8 +2564,39 @@ body {
     text-align: center;
   }
 
+  .contacts {
+    padding: 57px 0 65px;
+  }
+
+  .contacts__wrapper {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -ms-grid-rows: -webkit-min-content 1fr;
+    -ms-grid-rows: min-content 1fr;
+    grid-template-rows: -webkit-min-content 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .contacts__map {
+    height: 316px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .contacts__info {
+    padding-top: 0;
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: 37px;
+  }
+
+  .contacts__item {
+    padding-right: 0;
+  }
+
   .footer {
-    padding: 40px 0;
+    padding: 40px 0 36px;
   }
 
   .footer__wrapper {
@@ -2448,8 +2610,9 @@ body {
   }
 
   .footer__logo {
+    margin-left: 1px;
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 
   .footer__logo svg {
@@ -2469,14 +2632,14 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 23px;
-    margin-bottom: 15px;
+    row-gap: 17px;
+    margin-bottom: 23px;
   }
 
   .footer__socials {
     margin-right: 0;
-    margin-left: -4px;
-    gap: 10px;
+    margin-left: -7px;
+    gap: 13px;
   }
 }
 

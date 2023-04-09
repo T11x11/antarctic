@@ -65,10 +65,10 @@
 
 .travel__image {
   display: flex;
+  align-self: flex-start;
 
   @include vp-1023 {
     padding-top: 9px;
-    align-self: flex-start;
   }
 
   @include vp-767 {
@@ -82,17 +82,18 @@
 
   img {
     width: 100%;
-    min-width: 324px;
+    min-width: 560px;
     height: 100%;
     object-fit: contain;
 
     @include vp-1023 {
+      min-width: 324px;
       max-width: 324px;
     }
 
     @include vp-767 {
       min-width: auto;
-      max-width: none;
+      max-width: 560px;
     }
   }
 }
