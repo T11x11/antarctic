@@ -1,30 +1,41 @@
-ymaps.ready(init);
-function init() {
+let flag = 0;
 
-  var myMap = new ymaps.Map("map", {
-    center: [59.938631, 30.323037],
-    zoom: 16,
-    controls: []
-  });
+window.addEventListener('scroll', function () {
+  let scrollY = window.scrollY;
+  let mapOffset = document.querySelector("#map").offsetTop;
 
+  if ((scrollY >= mapOffset - 500) && (flag == 0)) {
 
-  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  ),
+    ymaps.ready(init);
+    function init() {
 
-  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-    hintContent: 'Круизы по Арктике',
-    balloonContent: 'г. Санкт-Петербург, ул. Большая Конюшенная, 19/8'
-  }, {
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/svg/map-pin.svg',
-        // Размеры метки.
-        iconImageSize: [18, 22],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-10, -15]
-  }),
+      var myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323037],
+        zoom: 16,
+        controls: []
+      });
 
-  myMap.geoObjects.add(myPlacemark)
-}
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Круизы по Арктике',
+        balloonContent: 'г. Санкт-Петербург, ул. Большая Конюшенная, 19/8'
+      }, {
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/svg/map-pin.svg',
+            // Размеры метки.
+            iconImageSize: [18, 22],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-10, -15]
+      }),
+
+      myMap.geoObjects.add(myPlacemark)
+    }
+
+    flag = 1;
+  }
+});
