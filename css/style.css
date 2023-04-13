@@ -1328,6 +1328,18 @@ body {
   color: #011c40;
 }
 
+.is-open .header__nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 88.9vw;
+  right: 0;
+  left: auto;
+  height: 100%;
+  background-color: #f9fbfd;
+}
+
 .is-open .header__nav {
   width: 88.9vw;
   right: 0;
@@ -2371,13 +2383,15 @@ body {
     left: 0;
     opacity: 0;
     margin: 0;
-    padding: 84px 25px 20px;
+    margin-top: 84px;
+    padding: 0 25px 20px;
     position: fixed;
     pointer-events: none;
     top: 0;
     right: 0;
     visibility: hidden;
     z-index: 20;
+    overflow-y: auto;
   }
 
   .header__list {
