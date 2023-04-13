@@ -73,6 +73,18 @@
     }
   }
 
+  &__nav-wrapper {
+    .is-open & {
+      display: flex;
+      position: fixed;
+      width: 88.9vw;
+      right: 0;
+      left: auto;
+      height: 100%;
+      background-color: $color-alice-blue;
+    }
+  }
+
   &__nav {
     @media (max-width: 767px) {
       background-color: $color-alice-blue;
@@ -82,13 +94,15 @@
       left: 0;
       opacity: 0;
       margin: 0;
-      padding: 84px 25px 20px;
+      margin-top: 84px;
+      padding: 0 25px 20px;
       position: fixed;
       pointer-events: none;
       top: 0;
       right: 0;
       visibility: hidden;
       z-index: 20;
+      overflow-y: auto;
     }
 
     .is-open & {
