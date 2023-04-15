@@ -18,7 +18,7 @@
     margin: -1px;
     clip: rect(0 0 0 0);
 
-    &:focus + .custom-toggle__icon {
+    &:focus-visible + .custom-toggle__icon {
       outline: 2px solid $color-pale-blue;
       outline-offset: 1px;
     }
