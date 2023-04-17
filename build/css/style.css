@@ -2152,7 +2152,7 @@ body {
 
   .travel__content h2 {
     margin-bottom: 15px;
-    padding-right: 24px;
+    max-width: 300px;
     font-size: 26px;
     line-height: 36px;
   }
@@ -2511,6 +2511,7 @@ body {
   }
 
   .travel__content h2 {
+    max-width: 100%;
     font-size: 24px;
     line-height: 34px;
   }
